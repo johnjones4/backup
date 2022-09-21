@@ -13,6 +13,7 @@ RUN apt-get update && apt-get install -y \
   git \
   gh
 
+ENV GIT_DISCOVERY_ACROSS_FILESYSTEM=1
 ENV ORG_FILE="/config/orgs"
 ENV DATA_DIR="/data"
 

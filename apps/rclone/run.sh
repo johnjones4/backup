@@ -3,9 +3,7 @@
 archive_source () {
   archivedir=/data/"$1"
   mkdir -p "$archivedir"
-  rclone sync --tpslimit 13 "$1": "$archivedir" &> /tmp/log.txt
-  curl -X POST --data-binary @/tmp/log.txt http://jabba-loghandler:8060/api/job/rclone
-  rm /tmp/log.txt
+  rclone sync --tpslimit 13 "$1": "$archivedir"
 }
 
 archive_sources () {

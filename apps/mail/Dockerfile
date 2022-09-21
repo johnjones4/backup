@@ -18,10 +18,10 @@ WORKDIR /src
 RUN wget https://golang.org/dl/go1.15.15.linux-$(dpkg --print-architecture).tar.gz
 RUN tar zxvf go1.15.15.linux-$(dpkg --print-architecture).tar.gz
 
-RUN wget https://github.com/ProtonMail/proton-bridge/archive/refs/tags/v1.8.10.tar.gz
-RUN tar zxvf v1.8.10.tar.gz
+RUN wget https://github.com/ProtonMail/proton-bridge/archive/refs/tags/v2.3.0.tar.gz
+RUN tar zxvf v2.3.0.tar.gz
 
-WORKDIR /src/proton-bridge-1.8.10
+WORKDIR /src/proton-bridge-2.3.0
 RUN PATH=/src/go/bin:$PATH make install-dev-dependencies
 RUN PATH=/src/go/bin:$PATH make build-nogui
 
