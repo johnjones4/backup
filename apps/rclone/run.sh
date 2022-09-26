@@ -4,6 +4,9 @@ archive_source () {
   archivedir=/data/"$1"
   mkdir -p "$archivedir"
   rclone sync --tpslimit 13 "$1": "$archivedir"
+  if [ "$?" != "0" ]; then
+    exit 1
+  fi
 }
 
 archive_sources () {
