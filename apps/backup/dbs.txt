@@ -1,4 +1,2 @@
 weather
-zabbix
-grill
-jabba
+dle

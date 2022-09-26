@@ -8,7 +8,6 @@ RUN echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg ma
 RUN apt-get update && apt-get install -y postgresql-client-11
 
 COPY run.sh /run.sh
-COPY backup.sh /backup.sh
 COPY dbs.txt /dbs.txt
 
 VOLUME ["/backup"]
