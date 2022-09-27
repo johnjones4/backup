@@ -4,7 +4,7 @@ export PGPASSWORD="$POSTGRES_PASSWORD"
 
 while :
 do
-  tar zcf /backup/apps.tar.gz /apps
+  tar zcvf /backup/apps.tar.gz /apps
   if [ "$?" != "0" ]; then
     exit 1
   fi
